@@ -5,7 +5,7 @@ using PizzaBox.Storing.Mappers;
 
 namespace PizzaBox.Storing.Repositories
 {
-  public class CustRepo : IRepository<Cust>
+  public class CustRepo
   {
     private readonly Entities.HeroesAppSeanContext context;
     private readonly CustMapper mapper = new CustMapper();
@@ -42,7 +42,20 @@ namespace PizzaBox.Storing.Repositories
       }
     }
 
-    public void Remove(int id)
+        public Cust GetByName(string name)
+        {
+            var x = context.Custs.Where(x => x.Name == name).FirstOrDefault();
+            if (x != null)
+            {
+                return mapper.Map(x);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public void Remove(int id)
     {
             var x = context.Custs.SingleOrDefault(s => s.Id == id);
             if (x != null)

@@ -11,6 +11,7 @@ namespace PizzaBox.Storing.Mappers
             return new mPizzaOrder
             {
                 OrderId = pizzaOrder.OrderId,
+                CrustId= pizzaOrder.CrustId,
                 PizzaId = pizzaOrder.PizzaId,
                 SizeId = pizzaOrder.SizeId,
                 ToppingId1 = pizzaOrder.ToppingId1,
@@ -27,6 +28,7 @@ namespace PizzaBox.Storing.Mappers
             return new ePizzaOrder
             {
                 OrderId = pizzaOrder.OrderId,
+                CrustId = pizzaOrder.CrustId,
                 PizzaId = pizzaOrder.PizzaId,
                 SizeId = pizzaOrder.SizeId,
                 ToppingId1 = pizzaOrder.ToppingId1,

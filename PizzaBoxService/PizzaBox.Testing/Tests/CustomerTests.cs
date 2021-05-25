@@ -6,29 +6,35 @@ namespace PizzaBox.Testing.Tests
 
   public class CustomerTests
   {
+        Cust c = new Cust
+        {
+            Id = 2,
+            Name = "Billy",
+            Password = "Password123"
+        };
     [Fact]
     public void Test_CustomerName()
     {
-      // arrange
-      var sut = new Cust();
-      sut.Name = "Billy";
-
       // act
-      var actual = sut.Name;
+      var sut = c.Name;
 
       // assert
-      Assert.Equal(actual, "Billy");
+      Assert.Equal(sut, "Billy");
     }
+        [Fact]
     public void Test_CustomerId()
     {
-      var sut = new Cust();
-      sut.Id = 1;
-
-      // act
-      var actual = sut.Id;
+            var sut = c.Id;
 
       // assert
-      Assert.Equal(actual, 1);
+      Assert.Equal(sut, 2);
     }
+        [Fact]
+        public void Test_CustomerPassword()
+        {
+            var sut = c.Password;
+            Assert.Equal(sut, "Password123");
+
+        }
   }
 }

@@ -18,10 +18,10 @@ namespace PizzaBox.Domain.Models
     //public virtual Cust Cust { get; set; }
     //public virtual Store Store { get; set; }
 
-    //public CustOrder()
-    //{
-    //  PurchaseDate = DateTime.Now;
-    //}
+    public CustOrder()
+    {
+      PurchaseDate = DateTime.Now;
+   }
     /// <summary>
     /// 
     /// </summary>

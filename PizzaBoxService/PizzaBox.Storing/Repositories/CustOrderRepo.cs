@@ -5,7 +5,7 @@ using PizzaBox.Storing.Mappers;
 
 namespace PizzaBox.Storing.Repositories
 {
-  public class CustOrderRepo : IRepository<CustOrder>
+  public class CustOrderRepo
   {
     private readonly Entities.HeroesAppSeanContext context;
     private readonly CustOrderMapper mapper = new CustOrderMapper();
@@ -52,15 +52,25 @@ namespace PizzaBox.Storing.Repositories
             }
         }
 
-        public void Update(CustOrder t)
+        //public void Update(CustOrder t)
+        //{
+        //    var record = context.CustOrders.Where(x => x.Id == x.Id).FirstOrDefault();
+        //    if (record != null)
+        //    {
+        //        record.PurchaseDate = t.PurchaseDate;
+        //        record.Price = t.Price;
+        //        record.CustomerId = t.CustomerId;
+        //        record.StoreId = t.StoreId;
+        //        context.Update(record);
+        //        context.SaveChanges();
+        //    }
+        //}
+        public void UpdateOrderPrice(int id, decimal price)
         {
-            var record = context.CustOrders.Where(x => x.Id == x.Id).FirstOrDefault();
+            var record = context.CustOrders.Where(x => x.Id == id).FirstOrDefault();
             if (record != null)
             {
-                record.PurchaseDate = t.PurchaseDate;
-                record.Price = t.Price;
-                record.CustomerId = t.CustomerId;
-                record.StoreId = t.StoreId;
+                record.Price = price;
                 context.Update(record);
                 context.SaveChanges();
             }

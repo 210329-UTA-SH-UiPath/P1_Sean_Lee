@@ -19,14 +19,7 @@ namespace PizzaBox.Storing.Entities
         public decimal Price { get; set; }
         public byte Quantity { get; set; }
 
-        public virtual Crust Crust { get; set; }
         public virtual CustOrder Order { get; set; }
         public virtual Pizza Pizza { get; set; }
-        public virtual Size Size { get; set; }
-        public virtual Topping ToppingId1Navigation { get; set; }
-        public virtual Topping ToppingId2Navigation { get; set; }
-        public virtual Topping ToppingId3Navigation { get; set; }
-        public virtual Topping ToppingId4Navigation { get; set; }
-        public virtual Topping ToppingId5Navigation { get; set; }
     }
 }

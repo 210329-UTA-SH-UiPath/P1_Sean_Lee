@@ -5924,11 +5924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seanl\\revature\\PizzaBoxService\\PizzaBoxService\\PizzaBoxService.csproj",
+      "projectUniqueName": "C:\\Users\\seanl\\revature\\P1_Sean_Lee\\PizzaBoxService\\PizzaBoxService\\PizzaBoxService.csproj",
       "projectName": "PizzaBoxService",
-      "projectPath": "C:\\Users\\seanl\\revature\\PizzaBoxService\\PizzaBoxService\\PizzaBoxService.csproj",
+      "projectPath": "C:\\Users\\seanl\\revature\\P1_Sean_Lee\\PizzaBoxService\\PizzaBoxService\\PizzaBoxService.csproj",
       "packagesPath": "C:\\Users\\seanl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seanl\\revature\\PizzaBoxService\\PizzaBoxService\\obj\\",
+      "outputPath": "C:\\Users\\seanl\\revature\\P1_Sean_Lee\\PizzaBoxService\\PizzaBoxService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\seanl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5945,11 +5945,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\seanl\\revature\\PizzaBoxService\\PizzaBox.Domain\\PizzaBox.Domain.csproj": {
-              "projectPath": "C:\\Users\\seanl\\revature\\PizzaBoxService\\PizzaBox.Domain\\PizzaBox.Domain.csproj"
+            "C:\\Users\\seanl\\revature\\P1_Sean_Lee\\PizzaBoxService\\PizzaBox.Domain\\PizzaBox.Domain.csproj": {
+              "projectPath": "C:\\Users\\seanl\\revature\\P1_Sean_Lee\\PizzaBoxService\\PizzaBox.Domain\\PizzaBox.Domain.csproj"
             },
-            "C:\\Users\\seanl\\revature\\PizzaBoxService\\PizzaBox.Storing\\PizzaBox.Storing.csproj": {
-              "projectPath": "C:\\Users\\seanl\\revature\\PizzaBoxService\\PizzaBox.Storing\\PizzaBox.Storing.csproj"
+            "C:\\Users\\seanl\\revature\\P1_Sean_Lee\\PizzaBoxService\\PizzaBox.Storing\\PizzaBox.Storing.csproj": {
+              "projectPath": "C:\\Users\\seanl\\revature\\P1_Sean_Lee\\PizzaBoxService\\PizzaBox.Storing\\PizzaBox.Storing.csproj"
             }
           }
         }

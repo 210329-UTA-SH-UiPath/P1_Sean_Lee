@@ -15,8 +15,8 @@ namespace PizzaBoxService.Controllers
     [ApiController]
     public class CustController : ControllerBase
     {
-        private readonly IRepository<Cust> repo;
-        public CustController(IRepository<Cust> repo)
+        private readonly CustRepo repo;
+        public CustController(CustRepo repo)
         {
             this.repo = repo;
         }
@@ -47,6 +47,20 @@ namespace PizzaBoxService.Controllers
             catch (Exception ex)
             {
                 return NotFound($"Customer: {id} does not exist.");
+            }
+        }
+        [HttpGet("{name}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<Cust> Get([FromRoute] string name)
+        {
+            try
+            {
+                return Ok(repo.GetByName(name));
+            }
+            catch (Exception ex)
+            {
+                return NotFound($"Customer: {name} does not exist.");
             }
         }
         [HttpPost]

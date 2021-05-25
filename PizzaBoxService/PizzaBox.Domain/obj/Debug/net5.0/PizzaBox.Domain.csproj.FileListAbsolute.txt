@@ -10,3 +10,15 @@ C:\Users\seanl\revature\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBo
 C:\Users\seanl\revature\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.dll
 C:\Users\seanl\revature\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\ref\PizzaBox.Domain.dll
 C:\Users\seanl\revature\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.pdb
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\bin\Debug\net5.0\PizzaBox.Domain.deps.json
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\bin\Debug\net5.0\PizzaBox.Domain.dll
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\bin\Debug\net5.0\ref\PizzaBox.Domain.dll
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\bin\Debug\net5.0\PizzaBox.Domain.pdb
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.csprojAssemblyReference.cache
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.AssemblyInfoInputs.cache
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.AssemblyInfo.cs
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.csproj.CoreCompileInputs.cache
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.dll
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\ref\PizzaBox.Domain.dll
+C:\Users\seanl\revature\P1_Sean_Lee\PizzaBoxService\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.pdb

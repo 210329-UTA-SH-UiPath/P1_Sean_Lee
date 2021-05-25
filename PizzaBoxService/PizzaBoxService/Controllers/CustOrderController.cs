@@ -16,8 +16,8 @@ namespace PizzaBoxService.Controllers
     [ApiController]
     public class CustOrderController : ControllerBase
     {
-        private readonly IRepository<CustOrder> repo;
-        public CustOrderController(IRepository<CustOrder> repo)
+        private readonly CustOrderRepo repo;
+        public CustOrderController(CustOrderRepo repo)
         {
             this.repo = repo;
         }
@@ -92,11 +92,11 @@ namespace PizzaBoxService.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<CustOrder> Put(CustOrder x)
+        public ActionResult<CustOrder> Put(int id, decimal amount)
         {
             try
             {
-                repo.Update(x);
+                repo.UpdateOrderPrice(id, amount);
                 return Ok();
             }
             catch (Exception ex)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KfijEkiXBW9k0vQhV9o+gIY740EIRxtS4qwcEiAfQJZWbtf0NFXtT0cJLLWGLe6QaWvQN/s+2MASEP/Upp6+Yw==",
+  "dgSpecHash": "9vq08EHhH/TBOC+B4otZ0gwPEKMEcqVQLblsE5J4qsgEkkZ/nVAZmvrwk/5K3oQKTW4KSZSTov8q1w/I4AlIBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\seanl\\revature\\PizzaBoxService\\PizzaBox.Domain\\PizzaBox.Domain.csproj",
+  "projectFilePath": "C:\\Users\\seanl\\revature\\P1_Sean_Lee\\PizzaBoxService\\PizzaBox.Domain\\PizzaBox.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

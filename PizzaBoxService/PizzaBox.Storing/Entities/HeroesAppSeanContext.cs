@@ -30,6 +30,7 @@ namespace PizzaBox.Storing.Entities
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=tcp:heroesapp-sean.database.windows.net,1433;Initial Catalog=HeroesApp-Sean;User ID=Dev;Password=Password123");
             }
         }
@@ -110,15 +111,15 @@ namespace PizzaBox.Storing.Entities
 
             modelBuilder.Entity<PizzaOrder>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.OrderId, e.PizzaId });
 
                 entity.ToTable("Pizza_Order");
-
-                entity.Property(e => e.CrustId).HasColumnName("CrustID");
 
                 entity.Property(e => e.OrderId).HasColumnName("OrderID");
 
                 entity.Property(e => e.PizzaId).HasColumnName("PizzaID");
+
+                entity.Property(e => e.CrustId).HasColumnName("CrustID");
 
                 entity.Property(e => e.Price).HasColumnType("money");
 
@@ -136,54 +137,17 @@ namespace PizzaBox.Storing.Entities
 
                 entity.Property(e => e.ToppingId5).HasColumnName("ToppingID5");
 
-                entity.HasOne(d => d.Crust)
-                    .WithMany()
-                    .HasForeignKey(d => d.CrustId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Pizza_Ord__Crust__114A936A");
-
                 entity.HasOne(d => d.Order)
-                    .WithMany()
+                    .WithMany(p => p.PizzaOrders)
                     .HasForeignKey(d => d.OrderId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Pizza_Ord__Order__0E6E26BF");
+                    .HasConstraintName("FK__Pizza_Ord__Order__282DF8C2");
 
                 entity.HasOne(d => d.Pizza)
-                    .WithMany()
+                    .WithMany(p => p.PizzaOrders)
                     .HasForeignKey(d => d.PizzaId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Pizza_Ord__Pizza__0F624AF8");
-
-                entity.HasOne(d => d.Size)
-                    .WithMany()
-                    .HasForeignKey(d => d.SizeId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Pizza_Ord__SizeI__10566F31");
-
-                entity.HasOne(d => d.ToppingId1Navigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.ToppingId1)
-                    .HasConstraintName("FK__Pizza_Ord__Toppi__123EB7A3");
-
-                entity.HasOne(d => d.ToppingId2Navigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.ToppingId2)
-                    .HasConstraintName("FK__Pizza_Ord__Toppi__1332DBDC");
-
-                entity.HasOne(d => d.ToppingId3Navigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.ToppingId3)
-                    .HasConstraintName("FK__Pizza_Ord__Toppi__14270015");
-
-                entity.HasOne(d => d.ToppingId4Navigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.ToppingId4)
-                    .HasConstraintName("FK__Pizza_Ord__Toppi__151B244E");
-
-                entity.HasOne(d => d.ToppingId5Navigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.ToppingId5)
-                    .HasConstraintName("FK__Pizza_Ord__Toppi__160F4887");
+                    .HasConstraintName("FK__Pizza_Ord__Pizza__2739D489");
             });
 
             modelBuilder.Entity<Size>(entity =>

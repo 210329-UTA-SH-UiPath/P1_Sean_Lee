@@ -30,14 +30,7 @@ namespace PizzaBox.Domain.Abstracts
       }
       return toppingPrice;
     }
-    private void Factory()
-    {
-      Toppings = new List<Topping>();
-      AddCrust();
-      AddSize();
-      AddToppings();
-    }
-
+    
     public decimal GetFinalPrice()
     {
       decimal price = Price + Crust.Price + Size.Price;
@@ -48,8 +41,16 @@ namespace PizzaBox.Domain.Abstracts
       }
       return price;
     }
+        private void Factory()
+        {
+            Toppings = new List<Topping>();
+            AddCrust();
+            AddSize();
+            AddToppings();
+        }
 
-    public virtual void AddSize()
+
+        public virtual void AddSize()
     {
       Size = new Size();
     }

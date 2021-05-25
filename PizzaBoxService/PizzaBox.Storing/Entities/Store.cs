@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
+#nullable disable
+
 namespace PizzaBox.Storing.Entities
 {
-  public class Store
-  {
-    public Store()
+    public partial class Store
     {
-      CustOrders = new HashSet<CustOrder>();
+        public Store()
+        {
+            CustOrders = new HashSet<CustOrder>();
+        }
+
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public virtual ICollection<CustOrder> CustOrders { get; set; }
     }
-
-    public int Id { get; set; }
-    public string Name { get; set; }
-
-    public virtual ICollection<CustOrder> CustOrders { get; set; }
-  }
 }

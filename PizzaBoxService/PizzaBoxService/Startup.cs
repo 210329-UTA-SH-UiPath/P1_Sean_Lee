@@ -37,8 +37,10 @@ namespace PizzaBoxService
             services.AddDbContext<context>(options => options.UseSqlServer(Configuration.GetConnectionString("PizzaBoxDb")));
             services.AddScoped<IRepository<Store>, StoreRepo>();
             services.AddScoped<IRepository<Crust>, CrustRepo>();
-            services.AddScoped<IRepository<Cust>, CustRepo>();
-            services.AddScoped<IRepository<CustOrder>, CustOrderRepo>();
+            //services.AddScoped<IRepository<Cust>, CustRepo>();
+            services.AddScoped<CustRepo>();
+            services.AddScoped<CustOrderRepo>();
+            services.AddScoped<PizzaOrderRepo>();
             services.AddScoped<IRepository<Pizza>, PizzaRepo>();
             services.AddScoped<IRepository<Size>, SizeRepo>();
             services.AddScoped<IRepository<Topping>, ToppingRepo>();

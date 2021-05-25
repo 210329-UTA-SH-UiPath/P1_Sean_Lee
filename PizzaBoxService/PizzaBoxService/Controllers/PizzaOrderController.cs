@@ -15,8 +15,8 @@ namespace PizzaBoxService.Controllers
     [ApiController]
     public class PizzaOrderController : ControllerBase
     {
-        private readonly IRepository<PizzaOrder> repo;
-        public PizzaOrderController(IRepository<PizzaOrder> repo)
+        private readonly PizzaOrderRepo repo;
+        public PizzaOrderController(PizzaOrderRepo repo)
         {
             this.repo = repo;
         }
@@ -35,18 +35,19 @@ namespace PizzaBoxService.Controllers
                 return StatusCode(400, ex.Message);
             }
         }
-        [HttpGet("{id:int}")]
+
+        [HttpGet("{oId:int}/{cId:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<PizzaOrder> Get([FromRoute] int id)
+        public ActionResult<PizzaOrder> Get([FromRoute] int oId, int cId)
         {
             try
             {
-                return Ok(repo.GetById(id));
+                return Ok(repo.GetByOrderPizzaId(oId,cId));
             }
             catch
             {
-                return NotFound($"PizzaOrder {id} does not exist.");
+                return NotFound($"Order does not exist.");
             }
         }
         [HttpPost]
